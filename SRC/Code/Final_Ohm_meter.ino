@@ -37,7 +37,7 @@ void setup() {
   pinMode(BranchZOut, OUTPUT);
   MUX(-1);
 
-  lcd.begin(16, 2);    //初始化LCD，範圍為16*2
+  lcd.begin(16, 2);   
   lcd.setBacklightPin(3, POSITIVE);
   flash();
 }
@@ -142,9 +142,9 @@ void readChannel(ADS1115_MUX channel, float in[]) {
 
 void flash() {
   for (int i = 0; i < 3; i++) {
-    lcd.backlight();   // 開啟背光
+    lcd.backlight();   
     delay(200);
-    lcd.noBacklight(); // 關閉背光
+    lcd.noBacklight();
     delay(200);
   }
   lcd.backlight();
